@@ -1,0 +1,73 @@
+@import "../misc/var";
+
+// contacto
+
+/* formulario */
+
+.contacto {
+    background-image: url("../img/fondocontacto.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    padding-top: 4.4rem;
+    display: flex;
+    justify-content: end;
+    padding-right: 6%;
+    &__container {
+        width: 430px;
+        height: 503px;
+        background-image: url("https://cdn.axieinfinity.com/landing-page/_next/static/images/p2e-paper-e5b15f2bb8e6c1e8d2d006e438af5351@1x.webp");
+        &__form {
+            display: flex;
+            padding: 1rem 2rem;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 475px;
+            &__boton {
+                background-color: #2061c9;
+                color: white;
+                border-radius: 0.5rem;
+            }
+            & h1 {
+                text-align: center;
+                color: #2061c9;
+                font-size: 2.5rem;
+            }
+            & input {
+                padding: 0.5rem;
+                cursor: pointer;
+            }
+            &__social {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1024px){
+    .titulo__contact{
+        font-size: 3rem;
+        width: 450px;
+        text-decoration: none;
+    }
+    @media only screen and (max-width:767px){
+        .cuadro__form{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .titulo__contact{
+            width: 300px;
+            font-size: 2rem;
+        }    
+        .cuadro__form{
+            margin-bottom: 100px;
+        }
+
+        
+
+        
+            
+        }
+}

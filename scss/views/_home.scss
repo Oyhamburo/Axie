@@ -1,0 +1,172 @@
+@import "../misc/var";
+// home 
+.home {
+    &__video {
+        width: 100%;
+        margin-bottom: 12%;
+        
+
+    }
+    &__cloud { 
+        position: absolute;
+        width: 100%;    
+    }
+    &__flag {
+        text-align: center;
+        height: 47vh;
+        display: flex;
+        justify-content: center;
+        &__container {
+            background-image: url("https://cdn.axieinfinity.com/landing-page/_next/static/images/scroll-663a1f21776613e7cb0162d91ef76656@1x.webp");
+            background-repeat: no-repeat;
+            width: 1000px;
+            background-size: contain;
+            & h1 {
+                padding-top: 4rem;
+                font-size: 3.5rem;
+                text-transform: uppercase;
+                color: #e08d2a;
+            }
+            & h2 {
+                font-size: 2rem;
+                color: #e08d2a;
+                padding-top: 1.2rem;
+            }
+        }
+    }
+    &__mobile {
+        display: none;
+    }
+    &__players {
+        display: flex;
+        justify-content: space-between;
+        margin: 6rem 0;
+        align-items: center;
+
+        &__img {
+            animation-name: home-axie;
+            animation-duration: 1.3s;
+            animation-fill-mode: both;
+            position: absolute;
+            & img {
+                
+                width: 100%;
+                margin-bottom: 0;
+            }
+        }
+        & .prueba {
+            background-image: url(../img/fondomobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            animation-name: home-player;
+            animation-duration: 1.3s;
+            animation-fill-mode: both;
+            animation-timing-function: ease-out;
+            border-radius: 3rem 0rem 0rem 3rem;
+            box-shadow: 0 1rem 4rem rgba(0,0,0,0.7);
+            width: 55%;
+            position: absolute;
+            right: 0%;
+            padding: 1.5rem 0;
+        }
+        &__container {
+            
+            display: flex;
+            justify-content: space-around;
+            
+            
+           
+            
+            & div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #e08d2a;
+                animation-name: home-player-container;
+                animation-duration: 4s;
+                animation-fill-mode: both;
+                & i {
+                    font-size: 950%;
+                }
+                & h3, p {
+                    font-size: 200%;
+                }
+                
+            }
+        }
+        .home__mobile {
+            display: none;
+        }
+    }
+    
+}
+
+@keyframes home-axie {
+    0% {left: -30%;}
+    100% {left: 3%;
+    }
+}
+@keyframes home-player {
+    0% {width: 0;}
+    100% {width: 55%;}
+}
+@keyframes home-player-container {
+    0% {opacity: 0;
+    width: 0;
+    }
+    100% {opacity: 1;
+    width: 100%;
+    }
+}
+
+// media 
+
+@media only screen and (max-width:1024px){
+    .home__flag__container {
+        width: 752px;
+        height: 35vh;
+        & h2 {
+            font-size: 1.8rem;
+        }
+    }
+    .prueba {
+        width: 75%;
+    }
+    @keyframes home-player {
+        0% {width: 0;}
+        100% {width: 75%;}
+    }
+    .home__players__img {
+        display: none ;
+    }
+    @media only screen and (max-width:767px){
+        .home__flag {
+            display: none;
+        }
+        .home__players{
+            display: none;
+        }
+        .home__mobile {
+            display: block;
+            text-align: center;
+            & div {
+                margin-top: 10px;
+            }
+            & h2 {
+                font-size: 2rem;
+                color: $gold;
+            }
+            & h3 {
+                color: $gold;
+            }
+            
+        }
+        .home {
+            background-image: url(../img/fondomobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
